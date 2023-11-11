@@ -1,0 +1,12 @@
+.error{
+    background-image: url("https://img.freepik.com/fotos-premium/textura-pared-vieja-cemento-fondo-gris-negro-oscuro-diseno-color-gris-abstracto-son-claros-fondo-degradado-blanco_578000-53.jpg");
+}
+
+div{
+    text-align: center;
+}
+
+.error404{
+    height: 600px;
+    width: 900px;
+}
