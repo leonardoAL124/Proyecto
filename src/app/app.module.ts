@@ -11,6 +11,7 @@ import { OfertasComponent } from './screens/ofertas/ofertas.component';
 import { NosotrosComponent } from './screens/nosotros/nosotros.component';
 import { ContactosComponent } from './screens/contactos/contactos.component';
 import { Error404Component } from './screens/error404/error404.component';
+import { TarjetasProductosComponent } from './components/tarjetas-productos/tarjetas-productos.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Error404Component } from './screens/error404/error404.component';
     NosotrosComponent,
     ContactosComponent,
     Error404Component,
+    TarjetasProductosComponent,
   ],
   imports: [
     BrowserModule,
