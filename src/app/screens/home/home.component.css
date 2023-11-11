@@ -1,0 +1,19 @@
+div{
+    text-align: center;
+    color: white;
+}
+
+.carrusel{
+    height: 600px;
+    width: 1400px;
+}
+
+.tarjetas{
+    color: white;
+    margin-left: 30px;
+}
+
+.home{
+    background-image: url("https://img.freepik.com/fotos-premium/textura-pared-vieja-cemento-fondo-gris-negro-oscuro-diseno-color-gris-abstracto-son-claros-fondo-degradado-blanco_578000-91.jpg");
+}
+
