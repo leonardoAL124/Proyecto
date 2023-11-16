@@ -10,21 +10,48 @@
             <a class="navbar-item" href="">Home <i class="bi bi-house-fill"></i></a>
             <a class="navbar-item" href="productos">Productos <i class="bi bi-cart-fill"></i></a>
             <a class="navbar-item" href="ofertas">Ofertas <i class="bi bi-fire"></i></a>
-            <a class="navbar-item" href="nosotros&terminos-condiciones">Nosotros - Términos & Condiciones <i class="bi bi-people-fill"></i></a>
+            <a class="navbar-item" href="nosotros&terminos-condiciones">Nosotros - Términos & Condiciones <i
+                    class="bi bi-people-fill"></i></a>
             <a class="navbar-item" href="contactos">Contactos <i class="bi bi-telephone-fill"></i></a>
         </div>
 
-        <!-- <div class="navbar-end">
+        <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
+                    <div>
+                        <a class="navbar-item boton" (click)="openModal(registro)">Registro <i class="bi bi-person-add"></i></a>
+                        <ng-template #registro>
+                            <div class="modal-header">
+                                <h4 class="modal-title pull-left">Formulario de Registro</h4>
+                                <button type="button" class="btn-close close pull-right" aria-label="Close"
+                                    (click)="modalRef?.hide()">
+                                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <app-form-registro></app-form-registro>
+                            </div>
+                        </ng-template>
+                    </div>
+
+                    <div>
+                        <a class="navbar-item boton" (click)="openModal(login)">Iniciar Sesión <i class="bi bi-person-circle"></i></a>
+                        <ng-template #login>
+                            <div class="modal-header">
+                                <h4 class="modal-title pull-left">Formulario Login</h4>
+                                <button type="button" class="btn-close close pull-right" aria-label="Close"
+                                    (click)="modalRef?.hide()">
+                                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <app-form-login></app-form-login>
+                            </div>
+                        </ng-template>
+                    </div>
+                    
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </nav>
