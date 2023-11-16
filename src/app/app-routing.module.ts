@@ -6,6 +6,7 @@ import { OfertasComponent } from './screens/ofertas/ofertas.component';
 import { NosotrosComponent } from './screens/nosotros/nosotros.component';
 import { ContactosComponent } from './screens/contactos/contactos.component';
 import { Error404Component } from './screens/error404/error404.component';
+import { FormRegistroComponent } from './components/form-registro/form-registro.component';
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"ofertas", component:OfertasComponent},
   {path:"nosotros&terminos-condiciones", component:NosotrosComponent},
   {path:"contactos", component:ContactosComponent},
+  {path:"registro",component:FormRegistroComponent},
 
   {path:"**", component:Error404Component}
 
