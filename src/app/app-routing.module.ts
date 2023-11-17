@@ -7,6 +7,7 @@ import { NosotrosComponent } from './screens/nosotros/nosotros.component';
 import { ContactosComponent } from './screens/contactos/contactos.component';
 import { Error404Component } from './screens/error404/error404.component';
 import { FormRegistroComponent } from './components/form-registro/form-registro.component';
+import { DetalleProductosComponent } from './screens/detalle-productos/detalle-productos.component';
 
 const routes: Routes = [
 
@@ -16,9 +17,9 @@ const routes: Routes = [
   {path:"nosotros&terminos-condiciones", component:NosotrosComponent},
   {path:"contactos", component:ContactosComponent},
   {path:"registro",component:FormRegistroComponent},
+  {path:"detProds", component: DetalleProductosComponent},
 
   {path:"**", component:Error404Component}
-
 
 ];
 

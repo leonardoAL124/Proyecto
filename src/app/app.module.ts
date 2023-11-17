@@ -16,6 +16,7 @@ import { FormRegistroComponent } from './components/form-registro/form-registro.
 import { FormLoginComponent } from './components/form-login/form-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { DetalleProductosComponent } from './screens/detalle-productos/detalle-productos.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     TarjetasProductosComponent,
     FormRegistroComponent,
     FormLoginComponent,
+    DetalleProductosComponent,
   ],
   imports: [
     BrowserModule,
