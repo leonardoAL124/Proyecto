@@ -1,1 +1,32 @@
-<p>detalle-productos works!</p>
+<h1>DETALLE DEL PRODUCTO</h1>
+<hr>
+<div class="container">
+    <table class="table table-bordered table-striped table-dark">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Dispositivo</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{producto.productos.iden}}</td>
+                <td>{{producto.productos.nombre}}</td>
+                <td>{{producto.productos.precio}}</td>
+                <td>{{ producto.productos.dispositivo }}</td>
+                <td>
+                    <div>
+                        <img src="{{ producto.productos.imagen }}" alt="imagen" class="imagenes">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    <h1><a href="productos"><i class="bi bi-arrow-left-square-fill"></i></a></h1>
+</div>

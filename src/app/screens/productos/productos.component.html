@@ -1,7 +1,22 @@
 <div class="productos m-0">
+    <div class="boton-mas">
+        <a (click)="openModal(productos)"><i class="bi bi-plus-square-fill mas" style="color: black;"></i></a>
+        <ng-template #productos>
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Agregar productos</h4>
+                <button type="button" class="btn-close close pull-right" aria-label="Close"
+                    (click)="modalRef?.hide()">
+                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <app-form-productos></app-form-productos>
+            </div>
+        </ng-template>
+    </div>
     <div class="container-fluid col-lg-11 col-md-10 pt-4">
         <h1><i class="bi bi-cart4" style="color: white;"></i></h1>
     </div>
     
-    <app-tarjetas-productos></app-tarjetas-productos>
+    <app-tabla-productos></app-tabla-productos>
 </div>

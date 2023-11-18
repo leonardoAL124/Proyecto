@@ -1,0 +1,22 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>PRECIO</th>
+            <th>DISPOSITIVO</th>
+            <th>IMAGEN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productos">
+            <td>{{item.id}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.precio}}</td>
+            <td>{{item.dispositivo}}</td>
+            <td>
+                <img src="{{item.imagen}}" alt="imagen" class="imagen">
+            </td>
+        </tr>
+    </tbody>
+</table>
