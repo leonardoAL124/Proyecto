@@ -1,5 +1,13 @@
 import { CanActivateFn } from '@angular/router';
 
 export const usuarioGuard: CanActivateFn = (route, state) => {
-  return true;
+
+  let acceso = localStorage.getItem('login')
+
+  if (acceso === "true") {
+    return true;  
+  }else{
+    return false;
+  }
+  
 };

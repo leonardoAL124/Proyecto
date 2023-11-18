@@ -13,8 +13,8 @@ export class TablaProductosComponent {
   data:any
   ngOnInit(){
     this.servicio.getProducto().subscribe(item =>{
-      this.data=item;
-      this.data=Array.of(this.data)
+      this.data=item
+      console.log(this.data)
     })
   }
 }

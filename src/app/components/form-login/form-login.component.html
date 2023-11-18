@@ -1,16 +1,14 @@
-<form>
+<form (ngSubmit)="login(form)" #form="ngForm">
     <br>
     <div class="mb-1">
-        <label for="usuario" class="form-label">Usuario:</label>
-        <input type="text" class="form-control" id="usuario" aria-describedby="usuario">
+        <label class="form-label">Usuario:</label>
+        <input type="text" class="form-control" name="nick" [(ngModel)]=nick>
     </div>
     <br>
     <div class="mb-1">
-        <label for="exampleInputPassword1" class="form-label">Password:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label class="form-label">Password:</label>
+        <input type="password" class="form-control" name="pass" [(ngModel)]=pass>
     </div>
     <br>
-    <div class="boton">
-        <button type="submit" class="btn btn-primary mt-1">Iniciar Sesión</button>
-    </div>
+    <button type="submit" class="btn btn-primary mt-1 boton">Iniciar Sesión</button>
 </form>

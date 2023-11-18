@@ -8,6 +8,7 @@ import { ContactosComponent } from './screens/contactos/contactos.component';
 import { Error404Component } from './screens/error404/error404.component';
 import { FormRegistroComponent } from './components/form-registro/form-registro.component';
 import { DetalleProductosComponent } from './screens/detalle-productos/detalle-productos.component';
+import { usuarioGuard } from './guards/usuario/usuario.guard';
 
 const routes: Routes = [
 
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path:"nosotros&terminos-condiciones", component:NosotrosComponent},
   {path:"contactos", component:ContactosComponent},
   {path:"registro",component:FormRegistroComponent},
-  {path:"detProds/:id", component: DetalleProductosComponent},
+  {path:"detProds/:id", component: DetalleProductosComponent, canActivate: [usuarioGuard]},
 
   {path:"**", component:Error404Component}
 
