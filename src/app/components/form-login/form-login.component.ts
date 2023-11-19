@@ -11,15 +11,15 @@ export class FormLoginComponent {
 
   constructor(private service: UsuariosService, private ruta: Router){}
 
-  pass:any;
-  nick:any;
+  password:any;
+  usuario:any;
 
   login(formulario:any){
     console.log(formulario.value)
     let loginTemp = formulario.value
-    loginTemp= JSON.stringify(loginTemp); //pasa de JSON -> String
+    loginTemp= JSON.stringify(loginTemp); 
+    console.log(loginTemp)
 
-    //Recorrer los registros de la colección "login"
     this.service.getUsuarios().subscribe(user =>{
       for(let doc of user){
         if (loginTemp === JSON.stringify(doc)) {
@@ -27,9 +27,12 @@ export class FormLoginComponent {
           localStorage.setItem('login', 'true')
           this.ruta.navigate(['/'])
           break;
+        }else{
+          alert("Credenciales incorrectas!")
         }
       }
     })
+    
   }
 
 }

@@ -18,6 +18,7 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
+                    <div class="navbar-item" *ngIf="validacionLogin; else cerrSes">
                     <div>
                         <a class="navbar-item boton" (click)="openModal(registro)">Registro &nbsp; <i class="bi bi-person-add"></i></a>
                         <ng-template #registro>
@@ -34,7 +35,7 @@
                         </ng-template>
                     </div>
 
-                    <div *ngIf="temp; else cerrSes">
+                    <div >
                         <a class="navbar-item boton" (click)="openModal(login)">Iniciar Sesión &nbsp; <i class="bi bi-person-circle"></i></a>
                         <ng-template #login>
                             <div class="modal-header">
@@ -49,6 +50,7 @@
                             </div>
                         </ng-template>
                     </div>
+                </div>
                     <ng-template #cerrSes>
                         <div>
                             <a class="navbar-item boton" (click)="cerrar()">Cerrar Sesión &nbsp; <i class="bi bi-person-circle"></i></a>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductosService } from 'src/app/services/productos/productos.service';
 
 @Component({
@@ -8,13 +9,25 @@ import { ProductosService } from 'src/app/services/productos/productos.service';
 })
 export class TablaDetallesProductosComponent {
 
-  constructor( private servicio: ProductosService){}
+  constructor( private servicio: ProductosService, private ruta: ActivatedRoute){}
 
-  productos:any
+  dataProductos:any
+  productos:any = {}
 
   ngOnInit(){
-    this.servicio.getProducto().subscribe(item =>{
-      this.productos=item
+    this.servicio.getProducto().subscribe(prod =>{
+      this.dataProductos=prod;
+
+      this.ruta.params.subscribe(parametro =>{
+        const iden = +parametro['iden'];
+
+        for (let item of this.dataProductos) {
+          if (item.iden === iden) {
+            this.productos= item;
+          }
+          
+        }
+      })
     })
   }
 

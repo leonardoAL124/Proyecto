@@ -9,22 +9,16 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class NavBarComponent {
   modalRef?: BsModalRef;
+  validLogin = localStorage.getItem('login');
+  
   constructor(private modalService: BsModalService, private ruta: Router) { }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
   }
 
-  validLogin = localStorage.getItem('login');
-
-  temp=true;
-
-  validacion(validLogin:any){
-    if (validLogin === 'false') {
-      this.temp;
-    } else {
-      !this.temp;
-    }
+  get validacionLogin(): boolean {
+    return this.validLogin === 'false'
   }
 
   cerrar(){
