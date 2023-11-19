@@ -15,6 +15,7 @@ export class TablaDetallesProductosComponent {
   ngOnInit(){
     this.servicio.getProducto().subscribe(item =>{
       this.productos=item
+      console.log(this.productos)
     })
   }
 
