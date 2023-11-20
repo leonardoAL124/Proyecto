@@ -28,9 +28,6 @@ export class TablaDetallesProductosComponent {
           
         }
       })
-    this.servicio.getProducto().subscribe(item =>{
-      this.productos=item
-      console.log(this.productos)
     })
   }
 
