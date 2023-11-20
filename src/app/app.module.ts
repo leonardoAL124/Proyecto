@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { TablaDetallesProductosComponent } from './components/tabla-detalles-productos/tabla-detalles-productos.component';
 import { FormProductosComponent } from './components/form-productos/form-productos.component';
 import { TablaProductosComponent } from './components/tabla-productos/tabla-productos.component';
+import { TablaOfertasComponent } from './components/tabla-ofertas/tabla-ofertas.component';
+import { FormOfertasComponent } from './components/form-ofertas/form-ofertas.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { TablaProductosComponent } from './components/tabla-productos/tabla-prod
     TablaDetallesProductosComponent,
     FormProductosComponent,
     TablaProductosComponent,
+    TablaOfertasComponent,
+    FormOfertasComponent,
   ],
   imports: [
     BrowserModule,

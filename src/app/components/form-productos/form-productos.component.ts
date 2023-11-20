@@ -7,6 +7,7 @@ import { ProductosService } from 'src/app/services/productos/productos.service';
   styleUrls: ['./form-productos.component.css']
 })
 export class FormProductosComponent {
+  
   constructor(private servicio: ProductosService) { }
 
   iden:any
