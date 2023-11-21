@@ -20,7 +20,7 @@ export class DetalleOfertasComponent {
 
       this.ruta.params.subscribe(parametro => {
 
-        const id = + parametro['iden']
+        const id = + parametro['id']
 
         for (let item of this.dataOfertas) {
           if (item.iden === id)

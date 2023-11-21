@@ -5,24 +5,24 @@
         <table class="table table-bordered table-striped table-dark">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Precio normal</th>
-                    <th>Precio oferta</th>
-                    <th>Dispositivo</th>
-                    <th>Imagen</th>
+                    <th style="color: white;">ID</th>
+                    <th style="color: white;">Nombre</th>
+                    <th style="color: white;">Precio normal</th>
+                    <th style="color: white;">Precio oferta</th>
+                    <th style="color: white;">Dispositivo</th>
+                    <th style="color: white;">Imagen</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{oferta.ofertas.iden}}</td>
-                    <td>{{oferta.ofertas.nombre}}</td>
-                    <td><s>{{oferta.ofertas.precioN}}</s></td>
-                    <td>{{oferta.ofertas.precioO}}</td>
-                    <td>{{ oferta.ofertas.dispositivo }}</td>
+                    <td>{{oferta.iden}}</td>
+                    <td>{{oferta.nombre}}</td>
+                    <td style="color: red;"><s>{{oferta.precioN}}</s></td>
+                    <td style="color: green;">{{oferta.precioO}}</td>
+                    <td>{{ oferta.dispositivo }}</td>
                     <td>
                         <div>
-                            <img src="{{ oferta.ofertas.imagen }}" alt="imagen" class="imagenes">
+                            <img src="{{ oferta.imagen }}" alt="imagen" class="imagenes">
                         </div>
                     </td>
                 </tr>
@@ -30,8 +30,13 @@
         </table>
     </div>
     <hr>
-    <div class="boton-volver">
-        <h1><a href="ofertas"><i class="bi bi-arrow-left-square-fill"></i></a></h1>
+    <div class="row">
+        <div class="boton-añadir col-lg-6">
+            <h1><a href=""><i class="bi bi-cart-plus-fill" style="color: black;"></i></a></h1>
+        </div>
+        <div class="boton-volver col-lg-6">
+            <h1><a href="productos"><i class="bi bi-arrow-left-square-fill" style="color: black;"></i></a></h1>
+        </div>
     </div>
     <br>
 </div>

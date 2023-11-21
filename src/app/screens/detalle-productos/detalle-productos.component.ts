@@ -20,10 +20,9 @@ export class DetalleProductosComponent {
 
       this.ruta.params.subscribe(parametro => {
 
-        const id = + parametro['iden']
-
+        const id = + parametro['id']
         for (let item of this.dataProductos) {
-          if (item.iden === id)
+          if (+item.iden === id)
             this.producto = item
         }
 
