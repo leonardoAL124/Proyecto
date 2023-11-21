@@ -19,11 +19,11 @@ import { DetalleProductosComponent } from './screens/detalle-productos/detalle-p
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { TablaDetallesProductosComponent } from './components/tabla-detalles-productos/tabla-detalles-productos.component';
 import { FormProductosComponent } from './components/form-productos/form-productos.component';
 import { TablaProductosComponent } from './components/tabla-productos/tabla-productos.component';
 import { TablaOfertasComponent } from './components/tabla-ofertas/tabla-ofertas.component';
 import { FormOfertasComponent } from './components/form-ofertas/form-ofertas.component';
+import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofertas.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +39,11 @@ import { FormOfertasComponent } from './components/form-ofertas/form-ofertas.com
     FormRegistroComponent,
     FormLoginComponent,
     DetalleProductosComponent,
-    TablaDetallesProductosComponent,
     FormProductosComponent,
     TablaProductosComponent,
     TablaOfertasComponent,
     FormOfertasComponent,
+    DetalleOfertasComponent,
   ],
   imports: [
     BrowserModule,
