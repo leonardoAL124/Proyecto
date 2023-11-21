@@ -1,0 +1,31 @@
+<form (ngSubmit)="saveOfertas(form)" #form="ngForm">
+    <div class="mb-1">
+        <label for="identificador" class="form-label">Identificador:</label>
+        <input type="number" class="form-control" name="iden" [(ngModel)]="iden">
+    </div>
+    <div class="mb-1">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre">
+    </div>
+    <div class="mb-1">
+        <label for="precioN" class="form-label">Precio normal:</label>
+        <input type="number" class="form-control" name="precioN" [(ngModel)]="precioN">
+    </div>
+    <div class="mb-1">
+        <label for="precioO" class="form-label">Precio oferta:</label>
+        <input type="number" class="form-control" name="precioO" [(ngModel)]="precioO">
+    </div>
+    <div class="mb-1">
+        <label for="dispositivo" class="form-label">Dispositivo:</label>
+        <input type="text" class="form-control" name="dispositivo" [(ngModel)]="dispositivo">
+    </div>
+    <div class="mb-1">
+        <label for="imagen" class="form-label">Url de la imagen:</label>
+        <input type="text" class="form-control" name="imagen" [(ngModel)]="imagen">
+    </div>
+    <div class="boton">
+        <div>
+            <a href="ofertas"><button type="submit" class="btn btn-primary mt-1">Guardar oferta</button></a>
+        </div>
+    </div>
+</form>
