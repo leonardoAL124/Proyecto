@@ -13,6 +13,10 @@
             <a class="navbar-item" href="nosotros&terminos-condiciones">Nosotros - Términos & Condiciones &nbsp; <i
                     class="bi bi-people-fill"></i></a>
             <a class="navbar-item" href="contactos">Contactos &nbsp; <i class="bi bi-telephone-fill"></i></a>
+            <div class="navbar-item" *ngIf="validarRol(); else validarFa">
+                <a class="navbar-item" href="contactos">Aquí van lasa opciones de administrador &nbsp; <i class="bi bi-telephone-fill"></i></a>
+            </div>
+            <ng-template #validarFa></ng-template>
         </div>
 
         <div class="navbar-end">

@@ -1,46 +1,4 @@
 {
-    "login":[
-        {
-            "usuario": "juan123",
-            "password": "clave123"
-          },
-          {
-            "usuario": "maria456",
-            "password": "contrasena456"
-          },
-          {
-            "usuario": "carlos789",
-            "password": "pass789"
-          },
-          {
-            "usuario": "ana101",
-            "password": "clave101"
-          },
-          {
-            "usuario": "pedro2022",
-            "password": "pass2022"
-          },
-          {
-            "usuario": "laura_123",
-            "password": "clave_laura"
-          },
-          {
-            "usuario": "sergio_456",
-            "password": "sergio_pass"
-          },
-          {
-            "usuario": "elena_789",
-            "password": "elena_pass"
-          },
-          {
-            "usuario": "roberto55",
-            "password": "clave_roberto"
-          },
-          {
-            "usuario": "isabel_67",
-            "password": "isabel_pass"
-          }
-    ],
     "usuarios":[
         {
             "nombre": "Juan",
@@ -49,7 +7,7 @@
             "genero": "Masculino",
             "usuario": "juan123",
             "password": "clave123",
-            "rol": "user"
+            "rol": "admin"
           },
           {
             "nombre": "María",

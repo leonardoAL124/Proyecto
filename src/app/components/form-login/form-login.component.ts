@@ -15,23 +15,33 @@ export class FormLoginComponent {
   usuario:any;
 
   login(formulario:any){
-    console.log(formulario.value)
-    let loginTemp = formulario.value
-    loginTemp= JSON.stringify(loginTemp); 
-    console.log(loginTemp)
+    console.log(formulario.value);
 
-    this.service.getUsuarios().subscribe(user =>{
-      for(let doc of user){
-        if (loginTemp === JSON.stringify(doc)) {
-          alert("Bienvenido!")
-          localStorage.setItem('login', 'true')
-          this.ruta.navigate(['/'])
+    this.service.getUsuarios().subscribe((users) =>{
+      console.log('Usuarios obtenidos:', users);
+
+      let foundUser;
+
+      for (const user of users) {
+        console.log('Usuario actual:', user);
+
+        if (user.usuario === formulario.value.usuario && user.password === formulario.value.password) {
+          foundUser = user;
           break;
-        }else{
-          alert("Credenciales incorrectas!")
         }
       }
-    })
+
+      console.log('Usuario encontrado:', foundUser);
+
+      if (foundUser) {
+        alert('Bienvenido!');
+        localStorage.setItem('login', 'true');
+        localStorage.setItem('usuario', JSON.stringify(foundUser));
+        this.ruta.navigate(['/']);
+      } else {
+        alert('Usuario o contraseña incorrecto!');
+      }
+    });
     
   }
 

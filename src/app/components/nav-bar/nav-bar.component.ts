@@ -10,8 +10,20 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 export class NavBarComponent {
   modalRef?: BsModalRef;
   validLogin = localStorage.getItem('login');
+  validRol = JSON.parse(localStorage.getItem('usuario') || '{}');
+  rol = this.validRol.rol;
   
   constructor(private modalService: BsModalService, private ruta: Router) { }
+
+  validarRol(): boolean{
+    if (this.rol === 'admin') {
+      return true;
+    } else if(this.rol === 'user'){
+      return false;
+    }else{
+      return false;
+    }
+  }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
