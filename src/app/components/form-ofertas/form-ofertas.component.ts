@@ -24,8 +24,8 @@ export class FormOfertasComponent {
     const temp = {
       iden: formulario.value.iden,
       nombre: formulario.value.nombre,
-      precioA: formulario.value.precio,
-      precioO: formulario.value.precio,
+      precioN: formulario.value.precioN,
+      precioO: formulario.value.precioO,
       dispositivo: formulario.value.dispositivo,
       imagen: formulario.value.imagen
     }

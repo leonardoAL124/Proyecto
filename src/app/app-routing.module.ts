@@ -9,6 +9,7 @@ import { Error404Component } from './screens/error404/error404.component';
 import { FormRegistroComponent } from './components/form-registro/form-registro.component';
 import { DetalleProductosComponent } from './screens/detalle-productos/detalle-productos.component';
 import { usuarioGuard } from './guards/usuario/usuario.guard';
+import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofertas.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"contactos", component:ContactosComponent},
   {path:"registro",component:FormRegistroComponent},
   {path:"detProds/:id", component: DetalleProductosComponent, canActivate: [usuarioGuard]},
+  {path:"detOfertas/:id",component: DetalleOfertasComponent},
 
   {path:"**", component:Error404Component}
 
