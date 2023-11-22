@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductosService } from 'src/app/services/productos/productos.service';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import { CarritoService } from 'src/app/services/carrito/carrito.service';
 
 (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
@@ -13,7 +14,7 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 })
 export class DetalleProductosComponent {
 
-  constructor(private servicio: ProductosService, private ruta: ActivatedRoute){}
+  constructor(private servicio: ProductosService, private ruta: ActivatedRoute, private carritoService: CarritoService){}
 
   dataProductos: any
   producto: any
@@ -72,4 +73,14 @@ export class DetalleProductosComponent {
     })
   }
 
+  agregarAlCarrito(producto: any) {
+    console.log('Producto a agregar:', producto);
+
+    // Verifica que producto sea un objeto y tenga la propiedad 'iden'
+    if (producto && producto.iden) {
+        this.carritoService.agregarAlCarrito(producto);
+    } else {
+        console.error('El producto no tiene una propiedad "iden" definida:', producto);
+    }
+  }
 }
