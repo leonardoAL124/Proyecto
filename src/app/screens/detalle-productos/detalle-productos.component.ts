@@ -14,13 +14,13 @@ import { CarritoService } from 'src/app/services/carrito/carrito.service';
 })
 export class DetalleProductosComponent {
 
-  constructor(private servicio: ProductosService, private ruta: ActivatedRoute, private carritoService: CarritoService){}
+  constructor(private servicio: ProductosService, private ruta: ActivatedRoute, private carritoService: CarritoService) { }
 
   dataProductos: any
   producto: any
 
-  descripcion:any
-  precio:any
+  descripcion: any
+  precio: any
 
   ngOnInit() {
     this.servicio.getProducto().subscribe(producto => {
@@ -38,7 +38,7 @@ export class DetalleProductosComponent {
     })
   }
 
-  imprimirFactura(){
+  imprimirFactura() {
     this.servicio.getProducto().subscribe(producto => {
       this.dataProductos = producto;
 
@@ -48,14 +48,14 @@ export class DetalleProductosComponent {
         for (let item of this.dataProductos) {
           if (+item.iden === id)
             this.producto = item.nombre;
-            this.descripcion = item.imagen;
-            this.precio = item.precio;
+          this.descripcion = item.imagen;
+          this.precio = item.precio;
         }
         var dd = {
           content: [
-            {text: 'Tables', style: 'header'},
+            { text: 'Tables', style: 'header' },
             'Official documentation is in progress, this document is just a glimpse of what is possible with pdfmake and its layout engine.',
-            {text: 'A simple table (no headers, no width specified, no spans, no styling)', style: 'subheader'},
+            { text: 'A simple table (no headers, no width specified, no spans, no styling)', style: 'subheader' },
             'The following table has nothing more than a body array',
             {
               style: 'tableExample',
@@ -73,14 +73,21 @@ export class DetalleProductosComponent {
     })
   }
 
+  cont = 0;
+
   agregarAlCarrito(producto: any) {
     console.log('Producto a agregar:', producto);
 
+
     // Verifica que producto sea un objeto y tenga la propiedad 'iden'
     if (producto && producto.iden) {
-        this.carritoService.agregarAlCarrito(producto);
+      this.carritoService.agregarAlCarrito(producto);
+      this.cont++
+      console.log(this.cont)
+      localStorage.setItem("contador", this.cont.toString())
+      window.location.reload()
     } else {
-        console.error('El producto no tiene una propiedad "iden" definida:', producto);
+      console.error('El producto no tiene una propiedad "iden" definida:', producto);
     }
   }
 }

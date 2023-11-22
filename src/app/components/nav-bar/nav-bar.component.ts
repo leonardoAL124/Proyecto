@@ -9,7 +9,8 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class NavBarComponent {
 
-  numeroDeProductosEnCarrito: number = 0;
+  //numeroDeProductosEnCarrito: number = 0;
+  numeroDeProductosEnCarrito: any = localStorage.getItem("contador");
   mostrarVistaPrevia: boolean = false;
   productosEnCarrito: any[] = [];
 
