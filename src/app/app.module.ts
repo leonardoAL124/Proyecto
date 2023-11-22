@@ -16,7 +16,6 @@ import { FormLoginComponent } from './components/form-login/form-login.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { DetalleProductosComponent } from './screens/detalle-productos/detalle-productos.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FormProductosComponent } from './components/form-productos/form-productos.component';
@@ -44,6 +43,7 @@ import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofert
     TablaOfertasComponent,
     FormOfertasComponent,
     DetalleOfertasComponent,
+    
   ],
   imports: [
     BrowserModule,

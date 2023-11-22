@@ -17,7 +17,7 @@
                     <td>{{producto.iden}}</td>
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}</td>
-                    <td>{{ producto.dispositivo }}</td>
+                    <td>{{producto.dispositivo }}</td>
                     <td>
                         <div>
                             <img src="{{ producto.imagen }}" alt="imagen" class="imagenes">
@@ -35,8 +35,9 @@
         <div class="boton-volver col-lg-6">
             <h1><a href="productos"><i class="bi bi-arrow-left-square-fill" style="color: black;"></i></a></h1>
         </div>
+        
     </div>
-    
+    <button class="button btn-success" (click)="imprimirFactura()">prueba</button>
     <br>
 </div>
 
