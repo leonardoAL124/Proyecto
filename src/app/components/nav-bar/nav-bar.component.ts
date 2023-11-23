@@ -8,19 +8,25 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+
+  //numeroDeProductosEnCarrito: number = 0;
+  numeroDeProductosEnCarrito: any = localStorage.getItem("contador");
+  mostrarVistaPrevia: boolean = false;
+  productosEnCarrito: any[] = [];
+
   modalRef?: BsModalRef;
   validLogin = localStorage.getItem('login');
   validRol = JSON.parse(localStorage.getItem('usuario') || '{}');
   rol = this.validRol.rol;
-  
+
   constructor(private modalService: BsModalService, private ruta: Router) { }
 
-  validarRol(): boolean{
+  validarRol(): boolean {
     if (this.rol === 'admin') {
       return true;
-    } else if(this.rol === 'user'){
+    } else if (this.rol === 'user') {
       return false;
-    }else{
+    } else {
       return false;
     }
   }
@@ -33,8 +39,14 @@ export class NavBarComponent {
     return this.validLogin === 'false'
   }
 
-  cerrar(){
+  cerrar() {
     localStorage.setItem('login', 'false')
     this.ruta.navigate(['/'])
+  }
+
+  toggleVistaPrevia() {
+    if (this.productosEnCarrito.length > 0) {
+      this.mostrarVistaPrevia = !this.mostrarVistaPrevia;
+    }
   }
 }
