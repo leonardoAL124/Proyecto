@@ -1,5 +1,5 @@
 <div class="productos m-0">
-    <div class="boton-mas">
+    <div class="boton-mas" *ngIf="validarRol(); else noAdmin">
         <a (click)="openModal(productos)"><i class="bi bi-plus-square-fill mas" style="color: black;"></i></a>
         <ng-template #productos>
             <div class="modal-header">
@@ -14,7 +14,9 @@
             </div>
         </ng-template>
     </div>
+    <ng-template #noAdmin></ng-template>
     <div class="tabla-productos">
+        <br>
         <app-tabla-productos></app-tabla-productos>
     </div>
 </div>
