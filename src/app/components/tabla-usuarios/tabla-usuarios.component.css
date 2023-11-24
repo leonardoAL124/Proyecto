@@ -1,0 +1,26 @@
+.boton-volver{
+    text-align: center;
+}
+
+.tabla-usuarios{
+    background-image: url("https://images.freeimages.com/images/premium/previews/4849/48497216-dark-grey-background-texture.jpg");
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+.datos{
+    font-size: 30px;
+    color: white;
+}
+
+.acciones{
+    font-size: 30px;
+    color: white;
+}
+
+.modal-body{
+    background-image: url("https://cdn5.dibujos.net/dibujos/pintados/201229/robot-game-robots-pintado-por-ironcrizt-9755086.jpg");
+}

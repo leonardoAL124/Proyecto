@@ -10,6 +10,7 @@ import { FormRegistroComponent } from './components/form-registro/form-registro.
 import { DetalleProductosComponent } from './screens/detalle-productos/detalle-productos.component';
 import { usuarioGuard } from './guards/usuario/usuario.guard';
 import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofertas.component';
+import { TablaUsuariosComponent } from './components/tabla-usuarios/tabla-usuarios.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:"registro",component:FormRegistroComponent},
   {path:"detProds/:id", component: DetalleProductosComponent, canActivate: [usuarioGuard]},
   {path:"detOfertas/:id",component: DetalleOfertasComponent},
+  {path:"lista-usuarios",component:TablaUsuariosComponent},
 
   {path:"**", component:Error404Component}
 

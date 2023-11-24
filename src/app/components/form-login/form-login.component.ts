@@ -35,6 +35,7 @@ export class FormLoginComponent {
 
       if (foundUser) {
         alert('Bienvenido!');
+        window.location.reload()
         localStorage.setItem('login', 'true');
         localStorage.setItem('usuario', JSON.stringify(foundUser));
         this.ruta.navigate(['/']);

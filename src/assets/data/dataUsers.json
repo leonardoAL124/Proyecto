@@ -1,94 +1,114 @@
 {
-    "usuarios":[
-        {
-            "nombre": "Juan",
-            "apellido": "Pérez",
-            "edad": 25,
-            "genero": "Masculino",
-            "usuario": "juan123",
-            "password": "clave123",
-            "rol": "admin"
-          },
-          {
-            "nombre": "María",
-            "apellido": "Gómez",
-            "edad": 30,
-            "genero": "Femenino",
-            "usuario": "maria456",
-            "password": "contrasena456",
-            "rol": "user"
-          },
-          {
-            "nombre": "Carlos",
-            "apellido": "López",
-            "edad": 28,
-            "genero": "Masculino",
-            "usuario": "carlos789",
-            "password": "pass789",
-            "rol": "user"
-          },
-          {
-            "nombre": "Ana",
-            "apellido": "Martínez",
-            "edad": 22,
-            "genero": "Femenino",
-            "usuario": "ana101",
-            "password": "clave101",
-            "rol": "user"
-          },
-          {
-            "nombre": "Pedro",
-            "apellido": "Rodríguez",
-            "edad": 35,
-            "genero": "Masculino",
-            "usuario": "pedro2022",
-            "password": "pass2022",
-            "rol": "user"
-          },
-          {
-            "nombre": "Laura",
-            "apellido": "Sánchez",
-            "edad": 27,
-            "genero": "Femenino",
-            "usuario": "laura_123",
-            "password": "clave_laura",
-            "rol": "user"
-          },
-          {
-            "nombre": "Sergio",
-            "apellido": "Gutiérrez",
-            "edad": 32,
-            "genero": "Masculino",
-            "usuario": "sergio_456",
-            "password": "sergio_pass",
-            "rol": "user"
-          },
-          {
-            "nombre": "Elena",
-            "apellido": "Hernández",
-            "edad": 29,
-            "genero": "Femenino",
-            "usuario": "elena_789",
-            "password": "elena_pass",
-            "rol": "user"
-          },
-          {
-            "nombre": "Roberto",
-            "apellido": "Díaz",
-            "edad": 40,
-            "genero": "Masculino",
-            "usuario": "roberto55",
-            "password": "clave_roberto",
-            "rol": "user"
-          },
-          {
-            "nombre": "Isabel",
-            "apellido": "Vargas",
-            "edad": 26,
-            "genero": "Femenino",
-            "usuario": "isabel_67",
-            "password": "isabel_pass",
-            "rol": "user"
-          }
-    ]
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "edad": 25,
+      "genero": "Masculino",
+      "usuario": "juan123",
+      "password": "clave123",
+      "rol": "admin"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "Gómez",
+      "edad": 30,
+      "genero": "Femenino",
+      "usuario": "maria456",
+      "password": "contrasena456",
+      "rol": "user"
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos",
+      "apellido": "López",
+      "edad": 28,
+      "genero": "Masculino",
+      "usuario": "carlos789",
+      "password": "pass789",
+      "rol": "user"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana",
+      "apellido": "Martínez",
+      "edad": 22,
+      "genero": "Femenino",
+      "usuario": "ana101",
+      "password": "clave101",
+      "rol": "user"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro",
+      "apellido": "Rodríguez",
+      "edad": 35,
+      "genero": "Masculino",
+      "usuario": "pedro2022",
+      "password": "pass2022",
+      "rol": "user"
+    },
+    {
+      "id": 5,
+      "nombre": "Laura",
+      "apellido": "Sánchez",
+      "edad": 27,
+      "genero": "Femenino",
+      "usuario": "laura_123",
+      "password": "clave_laura",
+      "rol": "user"
+    },
+    {
+      "id": 6,
+      "nombre": "Sergio",
+      "apellido": "Gutiérrez",
+      "edad": 32,
+      "genero": "Masculino",
+      "usuario": "sergio_456",
+      "password": "sergio_pass",
+      "rol": "user"
+    },
+    {
+      "id": 7,
+      "nombre": "Elena",
+      "apellido": "Hernández",
+      "edad": 29,
+      "genero": "Femenino",
+      "usuario": "elena_789",
+      "password": "elena_pass",
+      "rol": "user"
+    },
+    {
+      "id": 8,
+      "nombre": "Roberto",
+      "apellido": "Díaz",
+      "edad": 40,
+      "genero": "Masculino",
+      "usuario": "roberto55",
+      "password": "clave_roberto",
+      "rol": "user"
+    },
+    {
+      "id": 9,
+      "nombre": "Isabel",
+      "apellido": "Vargas",
+      "edad": 26,
+      "genero": "Femenino",
+      "usuario": "isabel_67",
+      "password": "isabel_pass",
+      "rol": "user"
+    },
+    {
+      "id": 10,
+      "nombre": "Dayanna",
+      "apellido": "Macay",
+      "edad": "22",
+      "genero": "Femenino",
+      "usuario": "daya",
+      "password": "12345",
+      "rol": "admin"
+    }
+  ]
 }
