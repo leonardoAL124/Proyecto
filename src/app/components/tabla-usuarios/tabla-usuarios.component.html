@@ -1,0 +1,57 @@
+<div class="tabla-usuarios">
+    <br>
+    <h1>LISTA DE USUARIOS</h1>
+    <br>
+    <div class="container">
+        <table class="container table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th style="color: white;">ID</th>
+                    <th style="color: white;">Nombre</th>
+                    <th style="color: white;">Usuario</th>
+                    <th style="color: white;">Contraseña</th>
+                    <th style="color: white;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of dataUsuarios">
+                    <td>{{item.id}}</td>
+                    <td>{{item.nombre}} {{item.apellido}}</td>
+                    <td>{{item.usuario}}</td>
+                    <td>{{item.password}}</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-lg-6 acciones">
+                                <a (click)="openModal(editar)"><i class="bi bi-pencil-fill"
+                                        style="color: yellow;"></i></a>
+                                <ng-template #editar>
+                                    <div class="modal-header">
+                                        <h4 class="modal-title pull-left">Editar usuario</h4>
+                                        <button type="button" class="btn-close close pull-right" aria-label="Close"
+                                            (click)="modalRef?.hide()">
+                                            <span aria-hidden="true" class="visually-hidden">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <app-form-editar></app-form-editar>
+                                    </div>
+                                </ng-template>
+                            </div>
+                            <div class="col-lg-6 acciones">
+                                <a href="lista-usuarios" (click)="eliminarUsuario(item.id)"><i class="bi bi-trash3-fill"
+                                        style="color: red;"></i></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <br>
+        <div class="boton-volver">
+            <h1><a href=""><i class="bi bi-arrow-left-square-fill" style="color: black;"></i></a></h1>
+        </div>
+        <br>
+    </div>
+</div>

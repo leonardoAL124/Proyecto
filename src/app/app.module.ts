@@ -23,6 +23,8 @@ import { TablaProductosComponent } from './components/tabla-productos/tabla-prod
 import { TablaOfertasComponent } from './components/tabla-ofertas/tabla-ofertas.component';
 import { FormOfertasComponent } from './components/form-ofertas/form-ofertas.component';
 import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofertas.component';
+import { TablaUsuariosComponent } from './components/tabla-usuarios/tabla-usuarios.component';
+import { FormEditarComponent } from './components/form-editar/form-editar.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofert
     TablaOfertasComponent,
     FormOfertasComponent,
     DetalleOfertasComponent,
+    TablaUsuariosComponent,
+    FormEditarComponent,
     
   ],
   imports: [

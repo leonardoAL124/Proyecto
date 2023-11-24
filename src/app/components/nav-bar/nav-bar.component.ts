@@ -42,6 +42,7 @@ export class NavBarComponent {
   cerrar() {
     localStorage.setItem('login', 'false')
     this.ruta.navigate(['/'])
+    window.location.reload()
   }
 
   toggleVistaPrevia() {
