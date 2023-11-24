@@ -1,0 +1,18 @@
+{
+    "carrito":[
+        {
+            "id":"1",
+            "id_usuario":"1",
+            "nombre":"Juan",
+            "apellido":"Pérez",
+            "productos":{
+                "producto1":{
+                    "iden":"1",
+                    "nombre":"Assassin's Creed Valhalla",
+                    "imagen":"https://image.api.playstation.com/vulcan/ap/rnd/202006/1520/EDtkdijFRwbmGKk1G9lrDoEF.png",
+                    "precio":"19.99"
+                }
+            }
+        }
+    ]
+}

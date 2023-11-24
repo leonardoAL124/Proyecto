@@ -1,0 +1,19 @@
+<div>
+    <table class="container table table-dark table-hover">
+        <thead>
+            <tr>                
+                <th style="color: white;">Imagen</th>
+                <th style="color: white;">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{item.imagen}}</td>
+                <td>{{item.precio}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button class="button btn-success" (click)="imprimirFactura()">prueba</button>
+    <br>
+</div>

@@ -25,6 +25,7 @@ import { FormOfertasComponent } from './components/form-ofertas/form-ofertas.com
 import { DetalleOfertasComponent } from './screens/detalle-ofertas/detalle-ofertas.component';
 import { TablaUsuariosComponent } from './components/tabla-usuarios/tabla-usuarios.component';
 import { FormEditarComponent } from './components/form-editar/form-editar.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormEditarComponent } from './components/form-editar/form-editar.compon
     DetalleOfertasComponent,
     TablaUsuariosComponent,
     FormEditarComponent,
+    CarritoComponent,
     
   ],
   imports: [

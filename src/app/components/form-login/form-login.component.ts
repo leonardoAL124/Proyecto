@@ -26,6 +26,12 @@ export class FormLoginComponent {
         console.log('Usuario actual:', user);
 
         if (user.usuario === formulario.value.usuario && user.password === formulario.value.password) {
+          let userID = user.id;
+          let userNom = user.nombre;
+          let userApe = user.apellido;
+          localStorage.setItem('usuarioID', userID)
+          localStorage.setItem('usuarioNom', userNom)
+          localStorage.setItem('usuarioApe', userApe)
           foundUser = user;
           break;
         }
