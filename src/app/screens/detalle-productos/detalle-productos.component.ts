@@ -13,7 +13,7 @@ export class DetalleProductosComponent {
   constructor(private servicio: ProductosService, private ruta: ActivatedRoute, private carritoService: CarritoService) { }
 
   dataProductos: any
-  producto: any
+  producto: any 
 
   prodID:any;
   prodNom:any;
@@ -29,10 +29,14 @@ export class DetalleProductosComponent {
         const id = + parametro['id']
         for (let item of this.dataProductos) {
           if (+item.iden === id)
-          this.prodID = item.iden;
+          /* this.prodID = item.iden;
           this.prodNom = item.nombre;
           this.prodImg = item.imagen;
           this.prodPre = item.precio;
+          localStorage.setItem('prodID', this.prodID)
+          localStorage.setItem('prodNom', this.prodNom)
+          localStorage.setItem('prodImg', this.prodImg)
+          localStorage.setItem('prodPre', this.prodPre) */
             this.producto = item
         }
 

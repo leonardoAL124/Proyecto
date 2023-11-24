@@ -1,19 +1,40 @@
 <div>
     <table class="container table table-dark table-hover">
         <thead>
-            <tr>                
+            <tr>
                 <th style="color: white;">Imagen</th>
                 <th style="color: white;">Precio</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of data">
-                <td>{{item.imagen}}</td>
-                <td>{{item.precio}}</td>
+                <td>
+                    <img src="{{item.productos.producto1.imagen}}" alt="imagen" width="200">
+                </td>
+                <td>{{item.productos.producto1.precio}}</td>
+            </tr>
+            <tr *ngFor="let item of data">
+                <td>
+                    <img src="{{item.productos.producto2.imagen}}" alt="imagen" width="200">
+                </td>
+                <td>{{item.productos.producto2.precio}}</td>
+            </tr>
+            <tr *ngFor="let item of data">
+                <td>
+                    <img src="{{item.productos.producto3.imagen}}" alt="imagen" width="200">
+                </td>
+                <td>{{item.productos.producto3.precio}}</td>
             </tr>
         </tbody>
     </table>
+    <div class="total">
+        <p style="color: white;">Total a pagar = <b>$ 112,48</b></p>
+    </div>
+    
     <br>
-    <button class="button btn-success" (click)="imprimirFactura()">prueba</button>
+    <div class="boton">
+        <button class="button btn-success" (click)="imprimirFactura()">PAGAR</button>
+    </div>
+    
     <br>
 </div>

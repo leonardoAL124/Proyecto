@@ -18,7 +18,7 @@
                     Acciones
                 </a>
 
-                <div class="navbar-dropdown">
+                <div class="navbar-dropdown" *ngIf="validarRol(); else validarFa">
                     <a class="navbar-item" href="lista-usuarios">Ver lista de usuarios &nbsp; <i
                             class="bi bi-person-lines-fill"></i></a>
                     <hr class="navbar-divider">
@@ -69,8 +69,20 @@
                     <ng-template #cerrSes>
                         <div class="row iconos">
                             <div class="col-lg-8" (click)="toggleVistaPrevia()">
-                                <a class="navbar-item boton"><i class="bi bi-bag-fill"></i><span class="cart-count">{{
-                                        numeroDeProductosEnCarrito }}</span></a>
+                                <a (click)="openModal(carrito)" class="navbar-item boton"><i class="bi bi-bag-fill"></i></a>
+
+                                <ng-template #carrito>
+                                    <div class="modal-header">
+                                        <h4 class="modal-title pull-left">Carrito de compras</h4>
+                                        <button type="button" class="btn-close close pull-right" aria-label="Close"
+                                            (click)="modalRef?.hide()">
+                                            <span aria-hidden="true" class="visually-hidden">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <app-carrito></app-carrito>
+                                    </div>
+                                </ng-template>
                             </div>
                             <div class="col-lg-4">
                                 <a class="navbar-item boton" (click)="cerrar()"><i

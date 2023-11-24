@@ -32,6 +32,7 @@ export class FormOfertasComponent {
     this.servicio.postOfertas(temp).subscribe()
 
     alert("Producto en oferta agregado")
+    window.location.reload()
   }
 
 }

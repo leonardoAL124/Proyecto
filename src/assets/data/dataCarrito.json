@@ -11,6 +11,18 @@
                     "nombre":"Assassin's Creed Valhalla",
                     "imagen":"https://image.api.playstation.com/vulcan/ap/rnd/202006/1520/EDtkdijFRwbmGKk1G9lrDoEF.png",
                     "precio":"19.99"
+                },
+                "producto2":{
+                    "iden":"5",
+                    "nombre":"FIFA 22",
+                    "imagen":"https://m.media-amazon.com/images/I/61Kda+eUmlL.jpg",
+                    "precio":"59.99"
+                },
+                "producto3":{
+                    "iden":"3",
+                    "nombre":"God of War",
+                    "imagen":"https://cl.buscafs.com/www.levelup.com/public/uploads/images/343486_256x324.jpg",
+                    "precio":"32.5"
                 }
             }
         }

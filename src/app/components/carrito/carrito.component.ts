@@ -29,7 +29,7 @@ export class CarritoComponent {
   }
 
   imprimirFactura() {
-    this.servicio.getProductosCarrito().subscribe(producto => {
+    /* this.servicio.getProductosCarrito().subscribe(producto => {
       this.dataProductos = producto;
 
       this.ruta.params.subscribe(parametro => {
@@ -60,7 +60,9 @@ export class CarritoComponent {
         };
         pdfMake.createPdf(dd).open();
       })
-    })
-  }
+    })*/
+    alert("PAGO REALIZADO.....")
+    window.location.reload()
+  } 
 
 }

@@ -30,6 +30,7 @@ export class FormProductosComponent {
     this.servicio.postProducto(temp).subscribe()
 
     alert("Producto agregado")
+    window.location.reload()
   }
 
 }
